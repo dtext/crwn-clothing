@@ -5,11 +5,12 @@ import {withRouter} from "react-router-dom";
 
 import CustomButton from "../custom-button/custom-button.component";
 import CartItem from "../card-item/card-item.component";
-import { selectCartItems} from "../../redux/cart/card.selectors";
+import { selectCartItems } from "../../redux/cart/card.selectors";
+import { toggleCartHidden } from "../../redux/cart/cart.actions";
 
 import './cart-dropdown.styles.scss'
 
-const CartDropdown = ({items, history}) => (
+const CartDropdown = ({items, history, dispatch}) => (
   <div className='cart-dropdown'>
     <div className='cart-items'>
       {
@@ -19,7 +20,10 @@ const CartDropdown = ({items, history}) => (
       }
     </div>
     <CustomButton
-      onClick={() => history.push('/checkout')}
+      onClick={() => {
+        history.push('/checkout')
+        dispatch(toggleCartHidden())
+      }}
       disabled={items.length < 1}
       title={items.length < 1 ? "add some items to your cart first": null}
     >
