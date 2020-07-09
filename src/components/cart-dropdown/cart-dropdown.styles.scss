@@ -16,6 +16,12 @@
     display: flex;
     flex-direction: column;
     overflow: scroll;
+
+    .empty-message {
+      font-size: 18px;
+      margin-top: 50px;
+      align-self: center;
+    }
   }
 
   button {
