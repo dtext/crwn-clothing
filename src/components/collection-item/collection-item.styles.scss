@@ -31,20 +31,12 @@
     }
   }
 
-  .custom-button {
-    width: 80%;
-    opacity: .85;
-    position: absolute;
-    top: 255px;
-    display: none
-  }
-
   &:hover {
     .image {
       opacity: .8;
     }
 
-    .custom-button {
+    button {
       display: flex;
     }
   }
