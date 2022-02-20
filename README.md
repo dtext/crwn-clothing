@@ -1,3 +1,7 @@
+```
+This project is archived. It contains my solution to some of the tasks of an online "code along" React course I took a while ago.
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
